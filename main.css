@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.wrapper {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper .container {
+  max-width: 80rem;
+}
+
+.canvas-wrapper {
+  margin: 0;
+}
+
+#cv {
+  border:3px solid #006600;
+}

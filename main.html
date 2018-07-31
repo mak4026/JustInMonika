@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" />
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript" src="draw.js"></script>
+  <title>モニカちゃん</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="container">
+      <h3>モニカちゃん Just Monika.</h3>
+      <p>あああああ</p>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <figure class="canvas-wrapper">
+            <legend>Encrypted Image</legend>
+            <canvas id="cv" width="360" height="240"></canvas>
+          </figure>
+        </div>
+        <div class="column">
+          <form>
+            <fieldset>
+              <label for="messageField">Message</label>
+              <textarea placeholder="Just Monika." id="messageField"></textarea>
+              <input class="button-primary" type="submit" value="Encrypt" onclick="draw()">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
