@@ -7,13 +7,14 @@ var Base64 = {
     }
 };
 
-function draw() {
+function main() {
   var canvas = document.getElementById("cv");
   if ( ! canvas || ! canvas.getContext ) {
     return false;
   }
   var imageArray = createBinaryArray(encryptMessage());
   console.log(imageArray);
+  console.log(imageArray.length);
   drawEncryptImage(canvas, imageArray);
 }
 
@@ -28,19 +29,34 @@ function drawEncryptImage(canvas, arr){
   // black fill
   ctx.fillStyle = '#000000';
   ctx.fillRect(0,0,canvasSize,canvasSize);
+
+  ctx.fillStyle = '#FFFFFF';
+  arr.split('').forEach(function(x, i){
+    if(x === "1"){
+      ctx.fillRect(i % canvasSize, Math.floor(i / canvasSize), 1, 1);
+    }
+  });
 }
 
 function calcCanvasSize(length){
-  return Math.max(100, Math.ceil(Math.sqrt(length)));
+  var userSize = document.getElementById("sizeField").value;
+  return Math.max(userSize, Math.ceil(Math.sqrt(length)));
 }
 
 function encryptMessage(){
   var text = document.getElementById("messageField").value;
-  return Base64.encode(text);
+  console.log(text);
+  var encoded = Base64.encode(text);
+  document.getElementById("base64str").textContent = encoded;
+  return encoded;
 }
 
 function createBinaryArray(text){
   return Array.prototype.map.call(text, function(x){
-    return x.charCodeAt(0).toString(2);
+    return zeroPadding(x.charCodeAt(0).toString(2), 8);
   }).join("");
+}
+
+function zeroPadding(num,length){
+    return ('0000000000' + num).slice(-length);
 }

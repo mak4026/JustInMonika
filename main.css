@@ -21,6 +21,15 @@ header.container {
   margin: 0;
 }
 
+#messageField {
+  min-height: 240px;
+}
+
 #cv {
   border:3px solid #006600;
+}
+
+#base64str {
+  word-wrap: break-word;
+  font-size: smaller;
 }
