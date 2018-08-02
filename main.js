@@ -60,3 +60,9 @@ function createBinaryArray(text){
 function zeroPadding(num,length){
     return ('0000000000' + num).slice(-length);
 }
+
+function sampleText(){
+  var ip = new LoremIpsum();
+  var textField = document.getElementById("messageField");
+  textField.value = ip.paragraph(100);
+}

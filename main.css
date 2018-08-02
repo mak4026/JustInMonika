@@ -1,10 +1,17 @@
-body {
+header {
   margin: 0;
-  padding: 0;
+  background-color: #FFE0FA;
 }
-header.container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+header div.container {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+h2 > span.subtitle {
+  letter-spacing: 0;
+  /*font-weight: lighter;*/
+  font-size: small;
 }
 .wrapper {
   display: block;
@@ -17,6 +24,10 @@ header.container {
   max-width: 80rem;
 }
 
+main.container {
+  padding: 2rem;
+}
+
 .canvas-wrapper {
   margin: 0;
 }
@@ -26,10 +37,22 @@ header.container {
 }
 
 #cv {
-  border:3px solid #006600;
+  border: 2px solid #9b4dca;
+  border-radius: 4px;
 }
 
 #base64str {
   word-wrap: break-word;
   font-size: smaller;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: #F4F4F4;
+  text-align: center;
+  font-size: small;
+}
+
+footer p {
+  margin-bottom: auto;
 }
