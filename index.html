@@ -18,7 +18,8 @@
   <div class="wrapper">
     <header>
       <div class="container">
-        <h2>Just in Monika.
+        <h2>
+          <span class="title">Just in Monika.</span>
           <span class="subtitle">Just in Time, Just Monika.</span>
         </h2>
         <p>monika.chrっぽい暗号画像を生成できます。</p>
@@ -46,6 +47,7 @@
               <canvas id="cv" width="280" height="240"></canvas>
             </figure>
           </div>
+          <button type="button" class="button-primary" onclick="saveCanvas()">Save Image</button>
           <div>
             <legend>Base64 Encode</legend>
             <p id="base64str"></p>

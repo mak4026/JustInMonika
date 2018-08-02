@@ -8,10 +8,14 @@ header div.container {
   padding-bottom: 10px;
 }
 
+h2 {
+  line-height: 0.8em;
+}
+
 h2 > span.subtitle {
   letter-spacing: 0;
-  /*font-weight: lighter;*/
   font-size: small;
+  display: inline-block;
 }
 .wrapper {
   display: block;
@@ -53,7 +57,7 @@ main.container {
 
 #base64str {
   word-wrap: break-word;
-  font-size: smaller;
+  font-size: x-small;
 }
 
 footer {
